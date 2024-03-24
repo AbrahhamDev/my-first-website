@@ -1,0 +1,201 @@
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  background-color: #212A3E;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.7em;
+}
+
+/* HAMBURGUER MENU */
+
+#check {
+  display: none;
+}
+
+.check-btn {
+  font-size: 25px;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  color: #fff;
+  font-size: 25px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+}
+
+.list {
+  background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
+  transition: background-size 0.3s;
+}
+
+.list:hover,
+.list:focus-visible {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.list {
+  padding-bottom: 1px;
+  --bg-h: 2px;
+}
+
+/* main section */
+
+.acerca-imagen {
+  flex: 0.5;
+}
+
+.seccion-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 4.7em auto;
+}
+
+.acerca-de-mi {
+  max-width: 500px;
+}
+
+.acerca-imagen img {
+  width: 100%; /* Ajusta según sea necesario */
+  max-width: 200px; /* Establece un ancho máximo para la imagen */
+  height: auto;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.acerca-de-mi {
+  flex: 1;
+  padding: 20px; /* Ajusta según sea necesario para agregar espacio entre el texto y los bordes */
+}
+
+/* PROJECT SECTION */
+
+.section-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 4.7em auto;
+}
+
+.project-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.project-image img {
+  max-width: 30rem;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project-info {
+  flex: 1 1 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1F2937;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+  
+  .check-btn {
+    display: block;
+  }
+
+  #header ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background: #394867;
+    text-align: center;
+    top: 60px;
+    left: 100%;
+    transition: all 0.3s;
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+    display: block;
+  }
+
+  #header nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .check-btn {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #check:checked ~ .check-btn {
+    transform: rotate(180deg);
+  }
+  
+  /* main section */
+
+  .seccion-1 {
+    flex-direction: column; 
+  }
+
+  .acerca-imagen,
+  .acerca-de-mi {
+    width: 90%; 
+    text-align: center; 
+  }
+  
+  /* projects section */
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .project-image img {
+    max-width: 20rem;
+    height: auto;
+    border-radius: 5px;
+  }
+}
